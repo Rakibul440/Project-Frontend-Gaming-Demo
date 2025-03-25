@@ -1,0 +1,147 @@
+@mixin display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about{
+    padding: 50px 150px;
+    background-color: #242424;
+
+    .whyUs{
+        background-color: #36454F;
+        height: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 20px 5%;
+
+        @include display;
+        flex-direction: row;
+        gap: 20px;
+
+        .img,.about-text{
+            width: 50%;
+            height: 100%;
+            @include display;
+            gap: 10px;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+
+            .btn{
+                padding: 15px;
+                background-color: rgb(11, 207, 11);
+                border: 0;
+                color: white;
+                font-weight: 500;
+                cursor: pointer;
+            }
+            @media (max-width:760px) {
+                width: 98%;
+             }
+            // @media (max-width:430px) {
+            //     width: 98%;
+            //  }
+        }
+        @media (max-width:760px) {
+            flex-direction: column;
+            height: 350px;
+         }
+        // @media (max-width:430px) {
+        //    flex-direction: column;
+        //    height: 350px;
+        // }
+    }
+
+    .quality,.contact{
+        @include display;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        gap: 20px;
+        .box{
+            width: 350px;
+            height: 230px;
+            background-color: #36454F;
+            border-radius: 10px;
+
+            @include display;
+            flex-direction: column;
+            gap: 15px;
+            padding: 10px;
+            text-align: center;
+            color: white;
+
+            img{
+                width: 50px;
+            }
+        }
+
+    }
+    .contact{
+        .box{
+            justify-content: start;
+            padding-top: 25px;
+            .contact-head{
+
+                h2{
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid gold;
+                }
+
+                .social,.contact-text {
+                    width: 90%;
+                    @include display;
+                    flex-direction: row;
+                    padding-top:30px ;
+                    gap: 10px;
+                    svg{
+                        width: 30px;
+                       fill: white;
+                       cursor: pointer;
+                    }
+                }
+                .contact-text{
+                    width: 95%;
+                    flex-direction: column;
+                    font-weight: 500;
+                }
+                .box3{
+                    padding-top: 10px;
+                    gap: 7px;
+                }
+            }
+        }
+    }
+
+    .company{
+        @include display;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top:50px ;
+        h2{
+            color: gold;
+            border-bottom: 1px solid gold;
+            
+        }
+        .company-logo{
+            @include display;
+            padding-top: 20px;
+            img{
+                width: 25rem;
+                @media (max-width:760px) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @media (max-width:760px) {
+        padding: 30px;
+    }
+
+    @media (max-width:430px) {
+        padding: 10px;
+    }
+
+}

@@ -1,0 +1,106 @@
+@mixin display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    
+    .head{
+        height: 150px;
+        background-color:#282828;
+        color: white;
+        @include display;
+        flex-direction: column;
+        p{
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    .log-form{
+        padding: 70px 100px;
+        background-color: #1A1A1A;
+        @include display;
+        flex-direction: row;
+        flex: 1;
+        gap: 30px;
+        color: white;
+        width: 100%;
+
+        .first{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            border-right: 1px solid gray;
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                width: 75%;
+                label{
+                    margin: 0;
+                }
+                input ,.sign{
+                    margin: 0;
+                    padding: 0;
+                    height: 40px;
+                    border-radius: 20px;
+                    outline: none;
+                    border: 0;
+                    border: 1px solid gray;
+                    background-color: #282828;
+                }
+
+                .sign{
+                    border: 0;
+                    background-color:rgb(4, 213, 4);
+                    color: white;
+                    font-weight: 600;
+                }
+           
+            }
+            span{
+                color: red;
+            }
+
+            @media (max-width:430px) {
+                border-right: 0;
+            }
+        }
+
+        .second{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            text-align: center;
+            // padding-left: 50px;
+
+            p{
+                padding-left: 20px;
+            }
+            .btn{
+                margin: 0;
+                padding: 0;
+                height: 40px;
+                width: 150px;
+                border-radius: 20px;
+                outline: none;
+                border: 0;
+                background-color: #FFFF00;
+                font-weight: 600;
+            }
+        }
+
+        @media (max-width:430px) {
+            flex-direction: column;
+            padding: 20px 10px;
+        }
+    }
+}

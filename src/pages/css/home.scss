@@ -1,0 +1,30 @@
+@mixin display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home{
+    @include display;
+    flex-direction: column;
+    gap: 50px;
+    padding: 100px;
+    overflow: hidden;
+    background-color:  #1A1A1A;
+    h1{
+        color: gold;
+        padding: 5px;
+        border-bottom: 1px solid gold;
+    }
+    .cards{
+        @include display;
+        flex-direction: row;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    @media (max-width:760px) {
+        padding: 30px;
+    }
+    @media (max-width:430px) {
+        padding: 10px;
+    }
+}
